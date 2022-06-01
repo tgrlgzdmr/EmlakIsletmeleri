@@ -17,6 +17,7 @@ namespace EmlakIsletmeleri
         {
             InitializeComponent();
         }
+        
         PstgreConnection bgl = new PstgreConnection();
         private void BtnLogin_Click(object sender, EventArgs e)
         {
@@ -41,6 +42,18 @@ namespace EmlakIsletmeleri
         private void FrmIsletmeGiris_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
         }
     }
 }

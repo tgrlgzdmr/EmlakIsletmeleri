@@ -103,6 +103,12 @@
     <Compile Include="FrmIsletmeDetail.Designer.cs">
       <DependentUpon>FrmIsletmeDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIsletmeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIsletmeEdit.Designer.cs">
+      <DependentUpon>FrmIsletmeEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmIsletmeGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +121,29 @@
     <Compile Include="FrmMulkAra.Designer.cs">
       <DependentUpon>FrmMulkAra.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMulkEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMulkEdit.Designer.cs">
+      <DependentUpon>FrmMulkEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMulkEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMulkEkle.Designer.cs">
       <DependentUpon>FrmMulkEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteriDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteriDetay.Designer.cs">
+      <DependentUpon>FrmMusteriDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteriEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteriEdit.Designer.cs">
+      <DependentUpon>FrmMusteriEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMusteriEkle.cs">
       <SubType>Form</SubType>
@@ -142,14 +166,26 @@
     <EmbeddedResource Include="FrmIsletmeDetail.resx">
       <DependentUpon>FrmIsletmeDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmIsletmeEdit.resx">
+      <DependentUpon>FrmIsletmeEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmIsletmeGiris.resx">
       <DependentUpon>FrmIsletmeGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMulkAra.resx">
       <DependentUpon>FrmMulkAra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMulkEdit.resx">
+      <DependentUpon>FrmMulkEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMulkEkle.resx">
       <DependentUpon>FrmMulkEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteriDetay.resx">
+      <DependentUpon>FrmMusteriDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteriEdit.resx">
+      <DependentUpon>FrmMusteriEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMusteriEkle.resx">
       <DependentUpon>FrmMusteriEkle.cs</DependentUpon>

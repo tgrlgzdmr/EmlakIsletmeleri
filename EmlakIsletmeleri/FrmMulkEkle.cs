@@ -35,13 +35,13 @@ namespace EmlakIsletmeleri
 
         private void BtnMulkKaydet_Click(object sender, EventArgs e)
         {
-            NpgsqlCommand cmd = new NpgsqlCommand("insert into mulk (mulksahipid, emlakturu, boyutmkare, odasayisi, isinmaturu, kiraliksatilik, mulksehir, mulkilce, mulkmahalle, kat, mulkisletmeid, mulkfiyat) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12)", bgl.baglanti());
+            NpgsqlCommand cmd = new NpgsqlCommand("insert into mulk (mulksahipid, emlakturu, boyutmkare, odasayisi, isinmaturu, mulksehir, mulkilce, mulkmahalle, kat, mulkisletmeid, mulkfiyat) values (@p1,@p2,@p3,@p4,@p5,@p7,@p8,@p9,@p10,@p11,@p12)", bgl.baglanti());
             cmd.Parameters.AddWithValue("@p1", int.Parse(musteri));
             cmd.Parameters.AddWithValue("@p2", TxtTur.Text);
             cmd.Parameters.AddWithValue("@p3", int.Parse(TxtBoyut.Text));
             cmd.Parameters.AddWithValue("@p4", TxtOda.Text);
             cmd.Parameters.AddWithValue("@p5", TxtIsınma.Text);
-            cmd.Parameters.AddWithValue("@p6", bool.Parse(kiraliksatilik.Text));
+            
             cmd.Parameters.AddWithValue("@p7", TxtSehir.Text);
             cmd.Parameters.AddWithValue("@p8", TxtIlce.Text);
             cmd.Parameters.AddWithValue("@p9", TxtMahalle.Text);
@@ -58,12 +58,25 @@ namespace EmlakIsletmeleri
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            kiraliksatilik.Text = "true";
+            
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            kiraliksatilik.Text = "false";
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmIsletmeDetail fr9 = new FrmIsletmeDetail();
+            fr9.IsletmeMail = mail;
+            fr9.Show();
+            this.Hide();
         }
     }
 }

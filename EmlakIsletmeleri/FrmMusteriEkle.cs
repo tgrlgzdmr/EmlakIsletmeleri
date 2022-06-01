@@ -42,5 +42,18 @@ namespace EmlakIsletmeleri
             fr7.Show();
             this.Hide();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmIsletmeDetail fr7 = new FrmIsletmeDetail();
+            fr7.IsletmeMail = mail;
+            fr7.Show();
+            this.Hide();
+        }
     }
 }

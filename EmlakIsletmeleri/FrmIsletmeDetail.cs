@@ -23,6 +23,8 @@ namespace EmlakIsletmeleri
         FrmMusteriEkle fr5 = new FrmMusteriEkle();
         FrmMulkEkle fr8 = new FrmMulkEkle();
         FrmMulkAra fr9 = new FrmMulkAra();
+        FrmIsletmeEdit fr10 = new FrmIsletmeEdit();
+        FrmMusteriDetay fr11 = new FrmMusteriDetay();
         
         private void BtnKayit_Click(object sender, EventArgs e)
         {
@@ -161,6 +163,41 @@ namespace EmlakIsletmeleri
                 fr9.Show();
                 this.Hide();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fr10.mail = IsletmeMail;
+            fr10.Show();
+            this.Hide();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (label1.Text == "1")
+            {
+                MessageBox.Show("Lütfen müşteri seçiniz");
+            }
+            else
+            {
+
+                fr11.musteri = label1.Text;
+                fr11.mail = IsletmeMail;
+                fr11.Show();
+                this.Hide();
+            }
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            Form1 frmm=new Form1();
+            frmm.Show();
+            this.Hide();
         }
     }
 }

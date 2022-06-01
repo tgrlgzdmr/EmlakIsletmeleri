@@ -192,7 +192,6 @@ namespace EmlakIsletmeleri
         string fiyat;
         string wher;
         string andd;
-        int a = 1;
 
         private void BtnMulkKaydet_Click(object sender, EventArgs e)
         {
@@ -392,7 +391,7 @@ namespace EmlakIsletmeleri
                 }
             }
             richTextBox1.Text = wher + tur + boyut + oda + kat + isinma + sehir + ilce + mahalle + fiyat + andd + "mulkid!=1 and mulkisletmeid=" + id.ToString();
-            NpgsqlCommand cmd19 = new NpgsqlCommand("select * from mulk " + richTextBox1.Text, bgl.baglanti());
+            NpgsqlCommand cmd19 = new NpgsqlCommand("select emlakturu, kat, boyutmkare,odasayisi,isinmaturu,mulksehir,mulkilce,mulkmahalle,mulkfiyat from mulk " + richTextBox1.Text, bgl.baglanti());
             //NpgsqlCommand cmd19 = new NpgsqlCommand("select * from mulk where ", bgl.baglanti());
             DataTable dt11 = new DataTable();
             NpgsqlDataAdapter da11 = new NpgsqlDataAdapter(cmd19);
@@ -599,13 +598,26 @@ namespace EmlakIsletmeleri
                 }
             }
             richTextBox2.Text = wher + tur + boyut + oda + kat + isinma + sehir + ilce + mahalle + fiyat + andd + " mulkid!=1 and mulkisletmeid="+ id.ToString();
-            NpgsqlCommand cmd19 = new NpgsqlCommand("select * from mulk " + richTextBox2.Text, bgl.baglanti());
+            NpgsqlCommand cmd19 = new NpgsqlCommand("select emlakturu, kat, boyutmkare,odasayisi,isinmaturu,mulksehir,mulkilce,mulkmahalle,mulkfiyat from mulk " + richTextBox2.Text, bgl.baglanti());
 
             //NpgsqlCommand cmd19 = new NpgsqlCommand("select * from mulk where ", bgl.baglanti());
             DataTable dt11 = new DataTable();
             NpgsqlDataAdapter da11 = new NpgsqlDataAdapter(cmd19);
             da11.Fill(dt11);
             dataGridView1.DataSource = dt11;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmIsletmeDetail frm3=new FrmIsletmeDetail();
+            frm3.IsletmeMail = mail;
+            frm3.Show();
+            this.Hide();
         }
     }
 }
