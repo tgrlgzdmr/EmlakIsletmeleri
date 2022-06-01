@@ -619,5 +619,46 @@ namespace EmlakIsletmeleri
             frm3.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            try
+            {
+                SolidBrush firca = new SolidBrush(Color.Black);
+                Font font = new Font("Arial", 12);
+                int i = 0;
+                int y = 60;
+                while(i<=dataGridView1.Rows.Count -2)
+                {
+                    font = new Font("Arial", 12);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[0].Value.ToString(), font,firca,60,y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[1].Value.ToString(), font, firca, 100, y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[2].Value.ToString(), font, firca, 220, y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[3].Value.ToString(), font, firca, 300, y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[4].Value.ToString(), font, firca, 380, y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[5].Value.ToString(), font, firca, 460, y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[6].Value.ToString(), font, firca, 640, y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[7].Value.ToString(), font, firca, 620, y);
+                    e.Graphics.DrawString(dataGridView1.Rows[i].Cells[8].Value.ToString(), font, firca, 700, y);
+                    y = y + 40;
+                    i= i + 1;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
